@@ -1,5 +1,6 @@
-# Create an Ubuntu instance wiht the default configuration.
-## Install nodejs with the below command.
+# 🚀 Deploy a Node.js App using Docker on Ubuntu
+## 1. Create an Ubuntu instance wiht the default configuration.
+## 2. Install nodejs with the below command.
 
 ```
 sudo apt-get update
@@ -10,10 +11,13 @@ sudo apt-get install -y nodejs
 ```
 ## Install git.
 `sudo apt-get install git -y`
-## Clone the rep.
+## Clone the repository.
 ```
 git clone clone https://github.com/Origamini/expressample.git .
 cd expressample
+```
+## Set up node js app
+```
 npm init -y
 npm install
 npm install express
@@ -23,10 +27,14 @@ npm install express
 sudo apt-get update
 sudo apt-get docker.io -y
 ```
-## With the help of the <strong>Dockerfile</strong> we will create the image with the following command
-```
-sudo docker build -t my-node-app
-Run the docker
-sudo docker run -itd --name C1 -p 81:3000 my-node-app
-```
-## Finally check the content at http://pub-ip-address:81
+## Create an image with the help of a Dockerfile
+`sudo docker build -t my-node-app`
+## Run the docker container
+`sudo docker run -itd --name C1 -p 81:3000 my-node-app`
+
+## View app at 
+http://pub-ip-address:81
+
+> **Note:**  
+> Make sure the EC2 instance's security group allows inbound traffic on port `81`, or the application won't be accessible from your browser.
+
