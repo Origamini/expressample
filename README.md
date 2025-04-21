@@ -13,7 +13,7 @@ sudo apt-get install -y nodejs
 `sudo apt-get install git -y`
 ## Clone the repository.
 ```
-git clone clone https://github.com/Origamini/expressample.git .
+git clone https://github.com/Origamini/expressample.git
 cd expressample
 ```
 ## Set up node js app
