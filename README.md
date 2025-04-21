@@ -28,7 +28,7 @@ sudo apt-get update
 sudo apt-get install docker.io -y
 ```
 ## Create an image with the help of a Dockerfile
-`sudo docker build -t my-node-app`
+`sudo docker build -t my-node-app .`
 ## Run the docker container
 `sudo docker run -itd --name C1 -p 81:3000 my-node-app`
 
